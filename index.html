@@ -28,18 +28,22 @@
       ></a>
       <nav>
         <ul class="nav-bar">
-          <li><a href="#home" class="current">Home</a></li>
+          <li>
+            <a href="#home" class="current" onclick="currentAdd()">Home</a>
+          </li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <div class="menu-icon">
-        <img src="./assets/menu.svg" alt="Imagem do menu" />
-      </div>
+
       <div id="switch" onclick="toggleMode()">
         <button></button>
         <span></span>
+      </div>
+
+      <div class="menu-icon" onclick="menuToggle()">
+        <i id="menu-icon" class="bx bx-menu"></i>
       </div>
     </header>
 
@@ -94,7 +98,7 @@
       </div>
 
       <div class="projects-content">
-        <div class="image-project" data-animation="left">
+        <div class="image-project" data-animation="left" id="Braver">
           <img
             src="./assets/projects-image/project-image-01.jpeg"
             alt="Garota gamer"
@@ -109,7 +113,7 @@
           </div>
         </div>
 
-        <div class="image-project" data-animation="top">
+        <div class="image-project" data-animation="top" id="ChaosChild">
           <img
             src="./assets/projects-image/project-image-02.jpeg"
             alt="Mago boladao"
@@ -125,7 +129,7 @@
           </div>
         </div>
 
-        <div class="image-project" data-animation="right">
+        <div class="image-project" data-animation="right" id="Illutopia">
           <img
             src="./assets/projects-image/project-image-03.jpeg"
             alt="Que bixo é esse"
@@ -144,7 +148,7 @@
           </div>
         </div>
 
-        <div class="image-project" data-animation="left">
+        <div class="image-project" data-animation="left" id="Viggenhorn">
           <img
             src="./assets/projects-image/project-image-04.jpeg"
             alt="CAVALEIRO BOLADAO"
@@ -160,7 +164,7 @@
           </div>
         </div>
 
-        <div class="image-project" data-animation="bottom">
+        <div class="image-project" data-animation="bottom" id="Snowt">
           <img
             src="./assets/projects-image/project-image-05.jpg"
             alt="Esta muy frio"
@@ -177,7 +181,7 @@
           </div>
         </div>
 
-        <div class="image-project" data-animation="right">
+        <div class="image-project" data-animation="right" id="Avakt">
           <img
             src="./assets/projects-image/project-image-06.jpeg"
             alt="Ta olhando pq quer me dar"
@@ -204,12 +208,7 @@
           sugestão? Nos contate!
         </h4>
       </div>
-      <!-- <div class="contact-page-icons">
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-      </div> -->
+
       <div class="contact-page-form" data-animation="right">
         <form action="">
           <input type="name" placeholder="Seu nome" required />
